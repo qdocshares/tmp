@@ -1,4 +1,6 @@
 on: push
 
 jobs:
-	job1:
+   job1:
+     step1:
+   job2:
