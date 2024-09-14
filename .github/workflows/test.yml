@@ -16,3 +16,4 @@ jobs:
        - run: echo "$ANDROID_NDK_HOME" >> $GITHUB_PATH
        - run: echo "LD_LIBRARY_PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/lib64:$LD_LIBRARY_PATH" >> $GITHUB_ENV
        - run: ndk-build  -v
+       - run: make android
