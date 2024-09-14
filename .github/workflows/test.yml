@@ -2,5 +2,9 @@ on: push
 
 jobs:
    job1:
-     step1:
+     steps:
+       - run: pwd
+       - run: ls
    job2:
+     steps:
+       - run: cat /etc/os-release
