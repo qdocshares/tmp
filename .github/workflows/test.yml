@@ -1,11 +1,12 @@
 on: push
 
 jobs:
-   runs-on: ubuntu-latest
    job1:
+     runs-on: ubuntu-latest
      steps:
        - run: pwd
        - run: ls
    job2:
+     runs-on: ubuntu-latest
      steps:
        - run: cat /etc/os-release
