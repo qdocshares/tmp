@@ -1,6 +1,7 @@
 on: push
 
 jobs:
+   runs-on: ubuntu-lastest
    job1:
      steps:
        - run: pwd
