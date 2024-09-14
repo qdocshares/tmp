@@ -1,14 +1,11 @@
 on: push
 
 jobs:
-   job1:
+   prepare:
      runs-on: ubuntu-latest
      steps:
        - run: pwd
        - run: ls
-   job2:
-     runs-on: ubuntu-latest
-     steps:
        - run: cat /etc/os-release
        - run: wget https://dl.google.com/android/repository/android-ndk-r21e-linux-x86_64.zip
        - run: sudo unzip -q android-ndk-r21e-linux-x86_64.zip -d /usr/local
@@ -16,4 +13,5 @@ jobs:
        - run: echo "$ANDROID_NDK_HOME" >> $GITHUB_PATH
        - run: echo "LD_LIBRARY_PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/lib64:$LD_LIBRARY_PATH" >> $GITHUB_ENV
        - run: ndk-build  -v
+       - run: actions/checkout@v4
        - run: make android
